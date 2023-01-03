@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,700;0,800;1,700;1,800&family=Roboto+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Source+Code+Pro:ital,wght@0,600;0,700;1,600;1,700&display=swap');
 :root{
     --bg-clr:hsl(240, 10%, 30%);
-    --cg:hsl(240, 10%, 40%);
     --text-clr:hsl(0, 0%, 100%);
     --acc-clr:hsl(240, 60%, 80%);
 }
@@ -21,18 +20,30 @@ body{
 h2{
     font-family: 'Roboto Mono',monospace;
 }
-a{
-    text-decoration: none;
-    color: var(--text-clr);
-}
 button{
     color: inherit;
+    font-size: 1rem;
 }
 .item{
     padding: 1rem;
 }
 h2,hr{
     margin: 0 1rem;
+}
+/* *Info*/
+section .info{
+    background-color: #333;
+    padding: 1rem;
+    border: solid 2px var(--acc-clr);
+    border-radius: 1rem;
+    z-index: 3;
+}
+.info .sug{
+    margin: .5rem 0rem;
+    padding: .75rem;
+    border-radius: 1rem;
+    background-color: #777;
+    border: solid 1px var(--acc-clr);
 }
 /* *Header*/
 header{
@@ -42,16 +53,6 @@ header{
     margin: 1rem;
     font-family: 'Nunito',sans-serif;
     font-style: italic;
-}
-header nav ul{
-    display: none;
-}
-header a{
-    padding: 0 .25rem;
-}
-header a:hover{
-    font-weight: 700;
-    text-decoration: underline;
 }
 header a img{
     transition: filter .25s ease-in;
@@ -65,36 +66,36 @@ header a img:hover{
     flex-wrap: wrap;
     gap: .75rem;
 }
-main #simple{
-    padding: 0rem;
-}
 .item{
     display: flex;
     justify-content: center;
 }
-main #simple button{
+#simple{
+    padding: 0rem;
+}
+#simple button{
     border: 0px solid;
     border-radius: 50%;
     padding: .75rem;
     font-family: 'Roboto Mono',monospace;
 }
-main #simple .trash{
+#simple .trash{
     background-color: transparent;
     transform: scale(.9);
     transition: background-color .25s ease-in, transform .25s ease-in;
 }
-main #simple .trash:hover{
+#simple .trash:hover{
     background-color: var(--acc-clr);
     transform: scale(1);
 }
-main #simple .add{
+#simple .add{
     background-color: transparent;
     transition: transform .25s ease-in;
 }
-main #simple .add:hover{
+#simple .add:hover{
     transform: translateY(-.5rem);
 }
-main #simple .claim{
+#simple .claim{
     background-color: #222;
     border: solid 2px #222;
     color: #eee;
@@ -103,10 +104,10 @@ main #simple .claim{
     border-radius: 1rem;
     transition: background-color .25s ease-in;
 }
-main #simple .claim:hover{
+#simple .claim:hover{
     background-color: transparent;
 }
-main #simple .submit{
+#simple .submit{
     background-color: transparent;
     border: solid 1px #222;
     color: #eee;
@@ -116,12 +117,12 @@ main #simple .submit{
     border-radius: 1rem;
     transition: border .25s ease-in;
 }
-main #simple .submit:hover{
+#simple .submit:hover{
     border: 3px solid #222;
     font-weight: 800;
 }
 /* *article:Simple tabs*/
-main #simple .tabs button{
+#simple .tabs button{
     background-color: var(--bg-clr);
     margin: 0 1rem;
     width: 60px;
@@ -157,7 +158,7 @@ main #simple .tabs button{
     left: 0;
 }
 /* *article:adv*/
-#adv .wrap{
+#adv .menuBlock{
     padding: 1rem;
     display: grid;
     margin: auto;
@@ -243,4 +244,40 @@ main #simple .tabs button{
     z-index: 1;
     height: 268px;
 }
-/* *Footer*/
+.infoBlock{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    border-radius: 1rem;
+    transition: outline .15s ease-out;
+}
+.infoBlock:hover{
+    outline: 3px solid var(--acc-clr);
+}
+.infoBlock img{
+    border-radius: 1rem;
+    aspect-ratio: 1/1;
+}
+.infoBlock p{
+    text-align: center;
+    position: absolute;
+    bottom: 15%;
+    left: 20%;
+    right: 20%;
+}
+/* *Desktop*/
+@media (min-width:768px){
+    #adv .wrap{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    #adv hr{
+        grid-column: 1/-1;
+    }
+    #adv .infoBlock{
+        justify-self: center;
+        margin: 1rem;
+        grid-column: 2/3;
+    }
+}

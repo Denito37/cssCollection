@@ -7,6 +7,7 @@
     <meta name="description" content="CSS Collection">
     <title>CSS Collection</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
 </head>
 <body>
 
@@ -23,19 +24,95 @@
             <section class="buttons">
                 <h2>Buttons</h2>
                 <hr>
-                <div class="item">
+                <div class="item" style="position: relative;">
                     <button class="trash">
                         <img src="images/delete_FILL0_wght400_GRAD0_opsz48.svg" alt="trash can icon" style="height: 3rem;">
                     </button>
+                    <section class="info" style="width: 80vw; max-width: 300px; position: absolute;">
+                        <img class="close" src="images/clear-icon.svg" alt="close" style="width: 2rem;">
+                        <code>
+                            <p> .trash{</p>
+                                <p>background-color: transparent; </p>
+                                <p>transform: scale(.9);</p>
+                                <p>transition: background-color .25s ease-in, transform .25s ease-in;</p>
+                            <p>}</p>
+                        </code>
+                        <code>
+                            <p>.trash:hover{</p> 
+                                <p>background-color: var(--acc-clr);</p>
+                                <p>transform: scale(1);</p>
+                            <p>}</p>
+                        </code>
+                        <p class="sug">
+                            Good to use for actions made in an application such as 
+                            deleting your work.
+                        </p>
+                    </section>
                     <button class="add"> 
                         <img src="images/add.svg" alt="add icon" style="height: 3rem;">
                     </button>
+                    <section class="info" style="width: 80vw; max-width: 300px; position: absolute;">
+                        <img class="close" src="images/clear-icon.svg" alt="close" style="width: 2rem;">
+
+                        <code>
+                            <p>.add{</p>
+                                <p>background-color: transparent;</p>
+                                <p>transition: transform .25s ease-in;</p>
+                            <p>}</p>
+                        </code>
+                        <code>
+                            <p>.add:hover{</p>
+                                <p>transform: translateY(-.5rem);</p>
+                            <p>}</p>
+                        </code>
+                        <p class="sug">
+                            Good to use to tell the user that you can intereact with this element
+                        </p>
+                    </section>
                     <button class="claim">
                         <p>Claim</p>
                     </button>
+                    <section class="info" style="width: 80vw; max-width: 300px; position: absolute;">
+                        <img class="close" src="images/clear-icon.svg" alt="close" style="width: 2rem;">
+                        <code>
+                            <p>.claim{</p>
+                                <p>background-color: #222;</p>
+                                <p>border: solid 2px #222;</p>
+                                <p>transition: background-color .25s ease-in;</p>
+                            <p>}</p>
+                        </code>
+                        <code>
+                            <p>.claim:hover{</p>
+                                <p>background-color: transparent;</p>
+                            <p>}</p>
+                        </code>
+                        <p class="sug">
+                            Visually appealing way to tell the user that you can intereact with this element
+                        </p>
+                    </section>
                     <button class="submit">
                         <p>submit</p>
                     </button>
+                    <section class="info" style="width: 80vw; max-width: 300px; position: absolute;">
+                        <img class="close" src="images/clear-icon.svg" alt="close" style="width: 2rem;">
+                        <code>
+                            <p>.submit{</p>
+                                <p>background-color: transparent;</p>
+                                <p>border: solid 1px #222;</p>
+                                <p>border-radius: 1rem;</p>
+                                <p>transition: border .25s ease-in;</p>
+                            <p>}</p>
+                        </code>
+                        <code>
+                            <p>.submit:hover{</p>
+                                <p>border: 3px solid #222;</p>
+                                <p>font-weight: 800;</p>
+                            <p>}</p>
+                        </code>
+                        <p class="sug">
+                            Good to use to tell the user that you can intereact with this element
+                        </p>
+                    </section>
                 </div>
             </section>
             <section class="tabs">
@@ -55,10 +132,18 @@
                 <h2>Blocks</h2>
                 <hr>
                 <div class="wrap">
-                    <div class="block1" style="background-color: hsl(240, 70%, 60%);">Block</div>
-                    <div class="block2" style="background-color: hsl(0, 70%, 60%);">Block</div>
-                    <div class="block3" style="background-color: hsl(120, 70%, 40%);">Block</div>
-                    <div class="block4" style="background-color: hsl(300, 70%, 40%);">Block</div>
+                    <div class="menuBlock">
+                        <div class="block1" style="background-color: hsl(240, 70%, 60%);">Block</div>
+                        <div class="block2" style="background-color: hsl(0, 70%, 60%);">Block</div>
+                        <div class="block3" style="background-color: hsl(120, 70%, 40%);">Block</div>
+                        <div class="block4" style="background-color: hsl(300, 70%, 40%);">Block</div>
+                    </div>
+                    <div class="infoBlock">
+                        <img src="images/image-photography.jpg" alt="orange" style="width: 300px; height: 300px;">
+                        <p style="color: hsl(240, 80%, 30%);">
+                            Lorem ipsum dolor sit amet consectetur.
+                        </p>
+                    </div>
                 </div>
             </section>
         </article>
