@@ -258,7 +258,7 @@ header a img:hover{
     position: relative;
     width: 300px;
     height: 300px;
-    margin: auto;
+    margin: 1rem auto;
     border-radius: 1rem;
     transition: outline .15s ease-out;
 }
@@ -287,7 +287,5 @@ header a img:hover{
     }
     #adv .infoBlock{
         justify-self: center;
-        margin: 1rem;
-        grid-column: 2/3;
     }
 }
