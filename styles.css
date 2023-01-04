@@ -18,17 +18,16 @@ body{
     font-family: 'Source Code Pro',monospace;
 }
 h2{
+    margin: 0 1rem;
     font-family: 'Roboto Mono',monospace;
+}
+hr{
+    margin: 0 1rem;
+    border: solid 1px var(--acc-clr)
 }
 button{
     color: inherit;
     font-size: 1rem;
-}
-.item{
-    padding: 1rem;
-}
-h2,hr{
-    margin: 0 1rem;
 }
 /* *Info*/
 section .info{
@@ -44,6 +43,16 @@ section .info{
     border-radius: 1rem;
     background-color: #777;
     border: solid 1px var(--acc-clr);
+}
+code{
+    font-size: .75rem;
+}
+.info .close{
+    transition: background-color .25s ease-in;
+    border-radius: 50%;
+}
+.info .close:hover{
+    background-color: #fff;
 }
 /* *Header*/
 header{
@@ -69,6 +78,7 @@ header a img:hover{
 .item{
     display: flex;
     justify-content: center;
+    padding: 1rem;
 }
 #simple{
     padding: 0rem;

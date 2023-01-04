@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="CSS Collection">
     <title>CSS Collection</title>
+    <link rel="icon" href="images/CC.png">
     <link rel="stylesheet" href="styles.css">
     <script src="app.js" defer></script>
 </head>
@@ -28,7 +29,7 @@
                     <button class="trash">
                         <img src="images/delete_FILL0_wght400_GRAD0_opsz48.svg" alt="trash can icon" style="height: 3rem;">
                     </button>
-                    <section class="info" style="width: 80vw; max-width: 300px; position: absolute;">
+                    <section class="info" style="width: 80vw; max-width: 320px; position: absolute;">
                         <img class="close" src="images/clear-icon.svg" alt="close" style="width: 2rem;">
                         <code>
                             <p> .trash{</p>
@@ -51,7 +52,7 @@
                     <button class="add"> 
                         <img src="images/add.svg" alt="add icon" style="height: 3rem;">
                     </button>
-                    <section class="info" style="width: 80vw; max-width: 300px; position: absolute;">
+                    <section class="info" style="width: 80vw; max-width: 320px; position: absolute;">
                         <img class="close" src="images/clear-icon.svg" alt="close" style="width: 2rem;">
 
                         <code>
@@ -66,13 +67,13 @@
                             <p>}</p>
                         </code>
                         <p class="sug">
-                            Good to use to tell the user that you can intereact with this element
+                            Good way to use to tell the user that you can intereact with this element
                         </p>
                     </section>
                     <button class="claim">
                         <p>Claim</p>
                     </button>
-                    <section class="info" style="width: 80vw; max-width: 300px; position: absolute;">
+                    <section class="info" style="width: 80vw; max-width: 320px; position: absolute;">
                         <img class="close" src="images/clear-icon.svg" alt="close" style="width: 2rem;">
                         <code>
                             <p>.claim{</p>
@@ -93,7 +94,7 @@
                     <button class="submit">
                         <p>submit</p>
                     </button>
-                    <section class="info" style="width: 80vw; max-width: 300px; position: absolute;">
+                    <section class="info" style="width: 80vw; max-width: 320px; position: absolute;">
                         <img class="close" src="images/clear-icon.svg" alt="close" style="width: 2rem;">
                         <code>
                             <p>.submit{</p>
@@ -118,14 +119,77 @@
             <section class="tabs">
                 <h2>Tabs</h2>
                 <hr>
-                <div class="item">
+                <div class="item" style="position: relative;">
                     <button class="one">Tab1</button>
+                    <section class="info" style="width: 80vw; max-width: 320px; position: absolute;">
+                        <img class="close" src="images/clear-icon.svg" alt="close" style="width: 2rem;">
+                        <code>
+                            <p>.one{</p>
+                            <p> border-radius: .5rem;</p>
+                            <p>}</p>
+                        </code>
+                        <code>
+                            <p>.one:focus,.one:hover {</p>
+                            <p>filter: brightness(1.4);</p>
+                            <p>}</p>
+                        </code>
+                        <p class="sug">
+                            When u have a large amount of related content
+                            it could be a good idea to divide them into
+                            different tabs that rotate in & out 
+                        </p>
+                    </section>
+
                     <button class="two">Tab2</button>
+                    <section class="info" style="width: 80vw; max-width: 320px; position: absolute;">
+                        <img class="close" src="images/clear-icon.svg" alt="close" style="width: 2rem;">
+                        <code>
+                            <p>.two:hover,.two:focus{</p>
+                            <p>font-weight: 800;</p>
+                            <p>}</p>
+                        </code>
+                        <p class="sug">
+                            When u have a large amount of related content
+                            it could be a good idea to divide them into
+                            different tabs that rotate in & out 
+                        </p>
+                    </section>
+
                     <button class="three">Tab3</button>
+                    <section class="info" style="width: 80vw; max-width: 320px; position: absolute;">
+                        <img class="close" src="images/clear-icon.svg" alt="close" style="width: 2rem;">
+                        <code>
+                            <p>.three{</p>
+                            <p>position: relative;</p>
+                            <p>}</p>
+                        </code>
+                        <code>
+                            <p>.three::after{</p>
+                            <p>content: '';</p>
+                            <p>width: 0;</p>
+                            <p>height: 0;</p>
+                            <p>transition:all .25s ease-in;</p>
+                            <p>}</p>
+                        </code>
+                        <code>
+                            <p>.three:hover::after,.three:focus::after{</p>
+                            <p>width: 100%;</p>
+                            <p>height: 2px;</p>
+                            <p>background: var(--acc-clr);</p>
+                            <p>position: absolute;</p>
+                            <p>bottom: 10px;</p>
+                            <p>left: 0;</p>
+                            <p>}</p>
+                        </code>
+                        <p class="sug">
+                            When u have a large amount of related content
+                            it could be a good idea to divide them into
+                            different tabs that rotate in & out 
+                        </p>
+                    </section>
                 </div>
             </section>
         </article>
-
 
         <article id="adv">
             <section class="blocks">
