@@ -16,6 +16,7 @@ body{
     background:var(--bg-clr);
     color: var(--text-clr);
     font-family: 'Source Code Pro',monospace;
+    overflow-x: hidden;
 }
 h2{
     margin: 0 1rem;
@@ -276,11 +277,24 @@ header a img:hover{
     left: 20%;
     right: 20%;
 }
+.blurBlock{
+    width: 300px;
+    height: 300px;
+    margin: 1rem auto;
+}
+.blurBlock img{
+    border-radius: 1rem;
+    filter: blur(4px) sepia(25%);
+    transition: filter .25s ease-in;
+}
+.blurBlock img:hover{
+    filter: blur(0px) sepia(0%);
+}
 /* *Desktop*/
 @media (min-width:768px){
     #adv .wrap{
         display: grid;
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(3,1fr);
     }
     #adv hr{
         grid-column: 1/-1;
