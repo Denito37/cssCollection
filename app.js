@@ -16,7 +16,8 @@ const tabArray = [tabOne,tabTwo,tabThree];
 const menuBlock = document.querySelector('.menuBlock');
 const blurBlock = document.querySelector('.blurBlock');
 const infoBlock = document.querySelector('.infoBlock');
-const blockArray = [infoBlock,blurBlock,menuBlock];
+const cta = document.querySelector('.cta')
+const blockArray = [infoBlock,blurBlock,menuBlock,cta];
 
 for(let i = 0; i<info.length; i++){
     hideTip(info[i]);
@@ -33,7 +34,7 @@ for(let i = 0; i< tabArray.length;i++){
 }
 for(let i = 0; i< blockArray.length;i++){
     blockArray[i].addEventListener('click', () =>{
-        revealTip(info[blockArray.length + tabArray.length + i + 1])
+        revealTip(info[blockArray.length + tabArray.length + i])
     })
 }
 for(let i=0 ;i< closeInfo.length;i++){
@@ -57,5 +58,6 @@ function hideTip(item){
         item.style.height = '0';
         item.style.opacity = '0';
         item.style.top = '-100rem';
+        item.style.left = '0';
         item.style.transition = 'opacity 0s ease-in';
 }

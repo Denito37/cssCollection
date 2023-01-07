@@ -31,7 +31,7 @@ button{
     font-size: 1rem;
 }
 /* *Info*/
-section .info{
+.info{
     background-color: #333;
     padding: 1rem;
     border: solid 2px var(--acc-clr);
@@ -304,6 +304,27 @@ header a img:hover{
 .blurBlock img:hover{
     filter: blur(0px) sepia(0%);
 }
+/**Footer*/
+.cta{
+    position: fixed;
+    bottom: .5rem;
+    right: .5rem;
+    background-color: #252525;
+    padding: 1rem;
+    border-radius: 1rem;
+    font-weight: 800;
+    z-index: 3;
+    transition: transform .25s ease-in, color .25s ease-in;
+}
+.cta:hover{
+    transform: scale(1.15);
+    color: var(--acc-clr)
+}
+.ctaInfo{
+    position: fixed;
+    top: 54vh !important;
+    right: 0 !important;
+}
 /* *Desktop*/
 @media (min-width:768px){
     #adv .wrap{
@@ -328,5 +349,8 @@ header a img:hover{
     }
     #adv .infoBlock{
         justify-self: center;
+    }
+    .ctaInfo{
+        left: 70% !important;
     }
 }
