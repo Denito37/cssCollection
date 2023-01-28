@@ -1,0 +1,21 @@
+{
+  "name": "csscollection",
+  "version": "1.0.0",
+  "description": "live site: [https://denito37.github.io/cssCollection/]",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Denito37/cssCollection.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Denito37/cssCollection/issues"
+  },
+  "homepage": "https://github.com/Denito37/cssCollection#readme",
+  "type": "module"
+}

@@ -8,17 +8,22 @@
     <title>CSS Collection</title>
     <link rel="icon" href="images/CC.png">
     <link rel="stylesheet" href="styles.css">
-    <script src="app.js" defer></script>
+    <script type="module" src="app.js" defer></script>
 </head>
 <body>
 
-    <header>
+    <header style="position: sticky; top: 0; z-index: 3;">
         <h1>CSS Collection</h1>
 
         <a href="https://github.com/Denito37" target="_blank" rel="noopener noreferrer">
             <img src="images/github-mark.svg" alt=" github-mark" style="height: 3rem;">
         </a>
     </header>
+
+    <div class="wrap">
+    <div class="tipPlaceholder" style="width: 400px; height: 100%; background-color: #333; border-radius: 1rem;">
+        <h1 style="color: #555; font-size: 3rem;">TIPS</h1>
+    </div>
 
     <main>
         <article id="simple">
@@ -29,90 +34,35 @@
                     <button class="trash">
                         <img src="images/delete_FILL0_wght400_GRAD0_opsz48.svg" alt="trash can icon" style="height: 3rem;">
                     </button>
-                    <section class="info" style="width: 80vw; max-width: 320px; position: absolute;">
+                    <section class="info">
                         <img class="close" src="images/clear-icon.svg" alt="close" style="width: 2rem;">
-                        <code>
-                            <p> .trash{</p>
-                                <p>background-color: transparent; </p>
-                                <p>transform: scale(.9);</p>
-                                <p>transition: background-color .25s ease-in, transform .25s ease-in;</p>
-                            <p>}</p>
-                        </code>
-                        <code>
-                            <p>.trash:hover{</p> 
-                                <p>background-color: var(--acc-clr);</p>
-                                <p>transform: scale(1);</p>
-                            <p>}</p>
-                        </code>
-                        <p class="sug">
-                            Good to use for actions made in an application such as 
-                            deleting your work.
-                        </p>
+                        <code></code>
+                        <p class="sug"></p>
                     </section>
                     <button class="add"> 
                         <img src="images/add.svg" alt="add icon" style="height: 3rem;">
                     </button>
-                    <section class="info" style="width: 80vw; max-width: 320px; position: absolute;">
+                    <section class="info">
                         <img class="close" src="images/clear-icon.svg" alt="close" style="width: 2rem;">
 
-                        <code>
-                            <p>.add{</p>
-                                <p>background-color: transparent;</p>
-                                <p>transition: transform .25s ease-in;</p>
-                            <p>}</p>
-                        </code>
-                        <code>
-                            <p>.add:hover{</p>
-                                <p>transform: translateY(-.5rem);</p>
-                            <p>}</p>
-                        </code>
-                        <p class="sug">
-                            Good way to use to tell the user that you can intereact with this element
-                        </p>
+                        <code></code>
+                        <p class="sug"></p>
                     </section>
                     <button class="claim">
                         <p>Claim</p>
                     </button>
-                    <section class="info" style="width: 80vw; max-width: 320px; position: absolute;">
+                    <section class="info">
                         <img class="close" src="images/clear-icon.svg" alt="close" style="width: 2rem;">
-                        <code>
-                            <p>.claim{</p>
-                                <p>background-color: #222;</p>
-                                <p>border: solid 2px #222;</p>
-                                <p>transition: background-color .25s ease-in;</p>
-                            <p>}</p>
-                        </code>
-                        <code>
-                            <p>.claim:hover{</p>
-                                <p>background-color: transparent;</p>
-                            <p>}</p>
-                        </code>
-                        <p class="sug">
-                            Visually appealing way to tell the user that you can intereact with this element
-                        </p>
+                        <code></code>
+                        <p class="sug"></p>
                     </section>
                     <button class="submit">
                         <p>submit</p>
                     </button>
-                    <section class="info" style="width: 80vw; max-width: 320px; position: absolute;">
+                    <section class="info">
                         <img class="close" src="images/clear-icon.svg" alt="close" style="width: 2rem;">
-                        <code>
-                            <p>.submit{</p>
-                                <p>background-color: transparent;</p>
-                                <p>border: solid 1px #222;</p>
-                                <p>border-radius: 1rem;</p>
-                                <p>transition: border .25s ease-in;</p>
-                            <p>}</p>
-                        </code>
-                        <code>
-                            <p>.submit:hover{</p>
-                                <p>border: 3px solid #222;</p>
-                                <p>font-weight: 800;</p>
-                            <p>}</p>
-                        </code>
-                        <p class="sug">
-                            Good to use to tell the user that you can intereact with this element
-                        </p>
+                        <code></code>
+                        <p class="sug"></p>
                     </section>
                 </div>
             </section>
@@ -121,71 +71,24 @@
                 <hr>
                 <div class="item" style="position: relative;">
                     <button class="one">Tab1</button>
-                    <section class="info" style="width: 80vw; max-width: 320px; position: absolute;">
+                    <section class="info">
                         <img class="close" src="images/clear-icon.svg" alt="close" style="width: 2rem;">
-                        <code>
-                            <p>.one{</p>
-                            <p> border-radius: .5rem;</p>
-                            <p>}</p>
-                        </code>
-                        <code>
-                            <p>.one:focus,.one:hover {</p>
-                            <p>filter: brightness(1.4);</p>
-                            <p>}</p>
-                        </code>
-                        <p class="sug">
-                            When u have a large amount of related content
-                            it could be a good idea to divide them into
-                            different tabs that rotate in & out 
-                        </p>
+                        <code></code>
+                        <p class="sug"></p>
                     </section>
 
                     <button class="two">Tab2</button>
-                    <section class="info" style="width: 80vw; max-width: 320px; position: absolute;">
+                    <section class="info">
                         <img class="close" src="images/clear-icon.svg" alt="close" style="width: 2rem;">
-                        <code>
-                            <p>.two:hover,.two:focus{</p>
-                            <p>font-weight: 800;</p>
-                            <p>}</p>
-                        </code>
-                        <p class="sug">
-                            When u have a large amount of related content
-                            it could be a good idea to divide them into
-                            different tabs that rotate in & out 
-                        </p>
+                        <code></code>
+                        <p class="sug"></p>
                     </section>
 
                     <button class="three">Tab3</button>
-                    <section class="info" style="width: 80vw; max-width: 320px; position: absolute;">
+                    <section class="info">
                         <img class="close" src="images/clear-icon.svg" alt="close" style="width: 2rem;">
-                        <code>
-                            <p>.three{</p>
-                            <p>position: relative;</p>
-                            <p>}</p>
-                        </code>
-                        <code>
-                            <p>.three::after{</p>
-                            <p>content: '';</p>
-                            <p>width: 0;</p>
-                            <p>height: 0;</p>
-                            <p>transition:all .25s ease-in;</p>
-                            <p>}</p>
-                        </code>
-                        <code>
-                            <p>.three:hover::after,.three:focus::after{</p>
-                            <p>width: 100%;</p>
-                            <p>height: 2px;</p>
-                            <p>background: var(--acc-clr);</p>
-                            <p>position: absolute;</p>
-                            <p>bottom: 10px;</p>
-                            <p>left: 0;</p>
-                            <p>}</p>
-                        </code>
-                        <p class="sug">
-                            When u have a large amount of related content
-                            it could be a good idea to divide them into
-                            different tabs that rotate in & out 
-                        </p>
+                        <code></code>
+                        <p class="sug"></p>
                     </section>
                 </div>
             </section>
@@ -202,46 +105,18 @@
                             Lorem ipsum dolor sit amet consectetur.
                         </p>
                     </div>
-                    <section class="info" style="width: 80vw; max-width: 320px; position: absolute;">
+                    <section class="info">
                         <img class="close" src="images/clear-icon.svg" alt="close" style="width: 2rem;">
-                        <code>
-                            <p>.infoBlock{</p>
-                            <p>position: relative;</p>
-                            <p>}</p>
-                        </code>
-                        <code>
-                            <p>.infoBlock p{</p>
-                            <p>position: absolute;</p>
-                            <p>text-align: center;</p>
-                            <p>bottom: 15%;</p>
-                            <p>left: 20%;</p>
-                            <p>right: 20%;</p>
-                            <p>}</p>
-                        </code>
-                        <p class="sug">
-                            Use to connect a blurb of info that related to an image
-                        </p>
+                        <code></code>
+                        <p class="sug"></p>
                     </section>
                     <div class="blurBlock">
                         <img src="images/image-transform.jpg" alt="egg" style="width: 300px; aspect-ratio: 1/1;">
                     </div>
-                    <section class="info" style="width: 80vw; max-width: 320px; position: absolute;">
+                    <section class="info">
                         <img class="close" src="images/clear-icon.svg" alt="close" style="width: 2rem;">
-                        <code>
-                            <p>.blurBlock img{</p>
-                            <p>filter: blur(4px) sepia(25%);</p>
-                            <p>transition: filter .25s ease-in;</p>
-                            <p>}</p>
-                        </code>
-                        <code>
-                            <p>.blurBlock img:hover{</p>
-                            <p>filter: blur(0px) sepia(0%);</p>
-                            <p>}</p>
-                        </code>
-                        <p class="sug">
-                            A fun way to bring attention to an element you
-                            want the user to intereact with.
-                        </p>
+                        <code></code>
+                        <p class="sug"></p>
                     </section>
                     <div class="menuBlock">
                         <div class="block1" style="background-color: hsl(240, 70%, 60%);">Block</div>
@@ -249,43 +124,22 @@
                         <div class="block3" style="background-color: hsl(120, 70%, 25%);">Block</div>
                         <div class="block4" style="background-color: hsl(300, 70%, 40%);">Block</div>
                     </div>
-                    <section class="info" style="width: 80vw; max-width: 320px; position: absolute;">
+                    <section class="info">
                         <img class="close" src="images/clear-icon.svg" alt="close" style="width: 2rem;">
-                        <code>
-                            <p></p>
-                            <p></p>
-                            <p></p>
-                        </code>
-                        <p class="sug">
-                            use for a more interactive menu with 4 pages
-                            (you can even fit a 5th unrelated page in the middle)
-                        </p>
+                        <code></code>
+                        <p class="sug"></p>
                     </section>
                 </div>
             </section>
         </article>
 
     </main>
+</div>
 
-    <section class="info ctaInfo" style="width: 80vw; max-width: 320px;">
+    <section class="info ctaInfo">
         <img class="close" src="images/clear-icon.svg" alt="close" style="width: 2rem;">
-        <code>
-            <p>.cta{</p>
-            <p>position: fixed;</p>
-            <p>bottom: .5rem;</p>
-            <p>right: .5rem;</p>
-            <p>transition: transform .25s ease-in, color .25s ease-in;</p>
-            <p>}</p>
-        </code>
-        <code>
-            <p>.cta:hover{</p>
-            <p>transform: scale(1.15);</p>
-            <p>color: var(--acc-clr)</p>
-            <p>}</p>
-        </code>
-        <p class="sug">
-            Put call to action content here such as a contact component
-        </p>
+        <code></code>
+        <p class="sug"></p>
 
     </section>
     <footer class="cta">

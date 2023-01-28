@@ -34,9 +34,12 @@ button{
 .info{
     background-color: #333;
     padding: 1rem;
+    margin: 0vh 0vw 20vh 0vw;
     border: solid 2px var(--acc-clr);
     border-radius: 1rem;
     z-index: 3;
+    position: fixed;
+    width: clamp(200px, 60vw, 400px);
 }
 .info .sug{
     margin: .5rem 0rem;
@@ -46,7 +49,7 @@ button{
     border: solid 1px var(--acc-clr);
 }
 code{
-    font-size: .75rem;
+    font-size: .9rem;
 }
 .info .close{
     transition: background-color .25s ease-in;
@@ -57,10 +60,11 @@ code{
 }
 /* *Header*/
 header{
+    background-color: var(--bg-clr);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 1rem;
+    padding: 1rem;
     font-family: 'Nunito',sans-serif;
     font-style: italic;
 }
@@ -75,6 +79,8 @@ header a img:hover{
     display: flex;
     flex-wrap: wrap;
     gap: .75rem;
+    max-width: 70%;
+    margin: 0 auto;
 }
 .item{
     display: flex;
@@ -174,15 +180,6 @@ header a img:hover{
     grid-template-rows: repeat(3,1fr);
     grid-template-columns: 1fr;
 }
-#adv .wrap .info:nth-child(2){
-    grid-row: 1/2;
-}
-#adv .wrap .info:nth-child(4){
-    grid-row: 2/3;
-}
-#adv .wrap .info:nth-child(6){
-    grid-row: 3/4;
-}
 #adv .menuBlock{
     padding: 1rem;
     display: grid;
@@ -274,6 +271,7 @@ header a img:hover{
     width: 300px;
     height: 300px;
     margin: 1rem auto;
+    -webkit-border-radius:0;
     border-radius: 1rem;
     transition: outline .15s ease-out;
 }
@@ -281,6 +279,7 @@ header a img:hover{
     outline: 3px solid var(--acc-clr);
 }
 .infoBlock img{
+    -webkit-border-radius:0;
     border-radius: 1rem;
     aspect-ratio: 1/1;
 }
@@ -297,6 +296,7 @@ header a img:hover{
     margin: 1rem auto;
 }
 .blurBlock img{
+    -webkit-border-radius:0;
     border-radius: 1rem;
     filter: blur(4px) sepia(25%);
     transition: filter .25s ease-in;
@@ -304,6 +304,7 @@ header a img:hover{
 .blurBlock img:hover{
     filter: blur(0px) sepia(0%);
 }
+
 /**Footer*/
 .cta{
     position: fixed;
@@ -320,37 +321,32 @@ header a img:hover{
     transform: scale(1.15);
     color: var(--acc-clr)
 }
-.ctaInfo{
-    position: fixed;
-    top: 54vh !important;
-    right: 0 !important;
+.tipPlaceholder{
+    display: none;
 }
 /* *Desktop*/
-@media (min-width:768px){
+@media (min-width:1025px){
+    .tipPlaceholder{
+        display: grid ;
+        place-content: center;
+    }
+    header h1{
+        position: relative;
+        left: 0px;
+    }
+    .wrap{
+        display: grid;
+        grid-template-columns: 400px auto;
+    }
     #adv .wrap{
         display: grid;
-        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(2,1fr);
         grid-template-rows: 1fr;
-    }
-    #adv .wrap .info:nth-child(2){
-        grid-row: 1/2;
-        grid-column: 1/2;
-    }
-    #adv .wrap .info:nth-child(4){
-        grid-row: 1/2;
-        grid-column: 2/3;
-    }
-    #adv .wrap .info:nth-child(6){
-        grid-row: 1/2;
-        grid-column: 3/4;
     }
     #adv hr{
         grid-column: 1/-1;
     }
     #adv .infoBlock{
         justify-self: center;
-    }
-    .ctaInfo{
-        left: 70% !important;
     }
 }
